@@ -1,0 +1,28 @@
+{
+	"message_type":"email",
+	"icon-class":"icon-at-sign",
+	"label":"Standard Email Template",
+	"configuration":{
+		"from_name":{"type":"string"},
+		"from_email":{"type":"string"}
+	},
+	"formats":[
+		{
+			"label":"HTML",
+			"render_engine":"hogan",
+			"render_file":"index.html",
+			"configuration":{
+				"html":{"type":"markdown"}
+			}
+		},
+		{
+			"label":"Text",
+			"help":"Emails are sent with both HTML and text formats, for mobile readers",
+			"render_engine":"hogan",
+			"render_file":"index.txt",
+			"configuration":{
+				"html":{"type":"markdown"}
+			}
+		}
+	]
+}

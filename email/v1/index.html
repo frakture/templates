@@ -1,0 +1,318 @@
+<html>
+<head>
+
+<style>
+  	
+  	body { background-color:#ffffff; }
+
+  	/* Set background here and also below. */
+  	div#background { background-color: #efede2; background: url('http://placehold.it/1x1/fffff0/fffff0'); background-repeat: repeat; }
+  	table#background_table_for_outlook { background-color: #efede2; background: url('http://placehold.it/1x1/fffff0/fffff0'); background-repeat: repeat; }
+  	
+  	div#preview { display:none; visibility:hidden; font-size:9px; color:#888888; text-align: left; width:100%; max-width:600px; min-width:300px; }
+  	div#topper { width: 100%; min-width: 300px; }
+	table#max_width_for_outlook { margin: 0; padding: 0; }
+  	div#container { width: 100%; min-width: 300px; margin: 0px; }
+  	div#container { max-width: 640px; } /* Remove for full-width message. Also need to edit HTML below as indicated. */
+  	  	
+  	table#background_table_for_outlook { width: 100%; margin: 0px; padding: 0px; }
+  	div#header { width: 100%; padding-top:10px; padding-bottom: 0px; margin: 0 auto; }
+	div#header img { max-width: 100% !important; }	
+  	div#body { background-color:#ffffff; border: 1px solid #ccc; } /* Adjust content well border here. */
+  	table#body_table_for_outlook { background-color: #ffffff; border: 1px solid #ccc; } /* Adjust content well border here. */
+  	div#footer { width: 100%; font-family: sans-serif; font-size: 12px; line-height: 1.4em; margin: 0 auto; padding-top: 2em; color: #444444; }
+  		
+	.inner { margin: 10px; } 
+	.ecxinner { padding: 10px; } /* .Support for Outlook.com */
+	
+	img { border: 0; }
+	a { color: blue; } 
+	a:hover, a:active { color: darkred; }
+	p { margin: 1em auto; }
+
+  	div.content { font-family: sans-serif; font-size: 14px; line-height: 1.4em; text-align: left; margin: 0; padding: 0; } 
+	div.content img { max-width: 100%; height: auto; }
+	div.content img[align] { margin: 0 0 1em 1em; max-width: 45%; }	
+
+	div#header p { margin: 0; }
+
+	div#body img#signature { margin: 5px 0; max-width: 100% !important; max-height: auto; }
+	
+	div#body_buttons { margin: 4em auto 2em auto; }	
+	div#body_buttons p { margin: 2em auto; }
+	
+	#contribute_btn {
+		background: rgb(163,10,12); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(163,10,12,1) 0%, rgba(185,15,16,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(163,10,12,1)), color-stop(100%,rgba(185,15,16,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(163,10,12,1) 0%,rgba(185,15,16,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(163,10,12,1) 0%,rgba(185,15,16,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(163,10,12,1) 0%,rgba(185,15,16,1) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(163,10,12,1) 0%,rgba(185,15,16,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a30a0c', endColorstr='#b90f10',GradientType=0 ); /* IE6-9 */	
+	}
+
+	div#unsub { margin: 0 auto 2em auto; }
+			
+	@media only screen and (max-width: 480px) {
+        body[style] { background: #ffffff !important; }
+        div#background[style] { background: none !important; }
+        div#body[style] { border: 0px !important; border-bottom: 1px solid #ccc !important; }
+		.inner[style] { margin: 0px !important; }
+        div#header[style] { background: url('http://placehold.it/300x75&text=Client+Logo+(300px)') center top no-repeat !important; background-size: 100% auto !important; width: 100% !important; max-width: 300px; height: 75px; margin: 0 auto !important; padding: 0 !important; }
+		div#header img[class] { visibility: hidden; }		
+		div.content[style] { font-size: 18px !important; line-height: 1.4em !important; }
+		div.content img[src] { max-width: 100%; height: auto; }
+		div.content img[align] { width: auto; height: auto; max-width: 300px !important; max-height: 240px; float: none; display: block; margin: 0 auto 0.5em auto !important; }
+		div.float-callout-mobile div.content img[align] { width: auto; height: auto; max-width: 45% !important; max-height: 100% !important; float: right; display: inline; margin: 0 0 0.5em 0.5em !important; }
+		div.content[style] a { font-size: 20px; line-height: 1.4em; }
+		div#footer[style] { background: none !important; }
+	}
+
+	/* 1.5 dpr */
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) { 
+        div#header[style] { background: url('http://placehold.it/1240x115&text=Client+Logo+(Retina,+1240px)') center top no-repeat !important; background-size: auto 115px; width: 100% !important; height: auto; margin: 0 auto !important; padding: 0 !important; }
+		div#header img[class] { visibility: hidden; }		
+	}
+			
+	/* 1.5 dpr */
+	@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 480px), (min-resolution: 144dpi) and (max-width: 480px) { 
+        div#header[style] { background: url('http://placehold.it/600x150&text=Client+Logo+(Retina,+600px)') center top no-repeat !important; background-size: 100% auto !important; width: 100% !important; max-width: 300px; height: 75px; margin: 0 auto !important; padding: 0 !important; }
+		div#header img[class] { visibility: hidden; }			
+	}
+
+</style>
+
+</head>
+ 
+<body bgcolor="#ffffff" style="background-color:#ffffff;">
+
+<!-- TemplateBeginEditable name="content" -->
+
+<center>
+
+<!-- Uncomment section below to add email preview copy for some email clients: gmail, outlook -->
+<!--
+<div id="preview" style="display:none; visibility:hidden; font-size:9px; color:#888888; text-align: left; width:100%; max-width:600px; min-width:300px;">
+	Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+</div>
+-->
+<!-- end #preview -->
+
+<!-- Uncomment section below to add "topper" copy to a forward-style or similar messages. -->
+<!-- 
+<div id="topper" class="content" style="width: 100%; min-width: 300px; font-family: sans-serif; font-size: 14px; line-height: 1.4em; text-align: left; margin: 0; padding: 0;">
+
+	<div class="inner" style="margin: 10px;">
+	
+		<p style="margin: 1em auto;">
+		Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+		</p>
+
+		<p style="margin: 1em auto;">
+		Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+		</p>
+
+		<p style="margin: 1em auto;">
+		<b><a href="#">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>
+		</p>
+		
+		<p style="margin: 1em auto; border-top: 1px solid #ccc; padding-top: 1em; margin-top: 2em;">
+		Begin forwarded message:
+		</p>
+
+		<p style="margin: 1em auto;">
+			<b>From:</b> XXXXXX<br>
+			<b>Subject:</b> XXXXXX<br>
+			<b>Date:</b> July 23, 2013<br>
+			<b>To:</b> XXXXXX<br>
+		</p>
+
+	
+	</div> <!~~ end .inner ~~>	
+
+</div>
+-->
+<!-- end #topper -->
+
+<!-- Set background here both in #background and #background_table_for_outlook and also above. -->
+<div id="background" bgcolor="#efede2" style="background-color: #efede2; background: url('http://placehold.it/1x1/fffff0/fffff0'); background-repeat: repeat;">
+
+<!--[if mso]>
+<table id="background_table_for_outlook" border="0" cellspacing="0" cellpadding="0" bgcolor="#efede2" style="background-color: #efede2; background: url('http://placehold.it/1x1/fffff0/fffff0); background-repeat: repeat; width: 100%; margin: 0px; padding: 0px;">
+<tr><td>
+<![endif]-->
+
+<!-- Section below sets max-width of 640px for various Outlook 2007 and above. Remove this section to remove max-width from email body. Also need to edit CSS above, edit DIV tag below and remove Outlook-specific code at end of DOM. --> 
+<!--[if mso]>
+	<table id="max_width_for_outlook" border="0" width="640" cellspacing="0" cellpadding="0" align="center" style="margin: 0; padding: 0;">
+	<tr><td>
+<![endif]-->
+
+	<div id="container" style="width: 100%; min-width: 300px; margin: 0px; max-width: 640px;"> <!-- Add class .float-callout-mobile to force callout graphics to float right on small screens. -->
+	<!-- Replace line above with the following to remove max-width from email body. Also need to edit CSS and Outlook-specific section above. -->
+	<!-- <div id="container" style="width: 100%; min-width: 300px; margin: 0px;"> -->
+
+		<div class="inner" style="margin: 10px;">
+
+			<a href="#"> <!-- Optional link to organization home page. -->
+				<div id="header" align="center" style="width: 100%; padding-top:10px; padding-bottom: 0px; margin: 0 auto;">
+					<p style="margin: 0;">
+						<img class="wide" src="http://placehold.it/620x115&text=Client+Logo+(620px)" alt="Logo" title="Logo" style="max-width: 100% !important;">
+					</p>
+				</div><!-- end #header -->
+			</a>
+				
+			<!-- Create main body content well. Opaque background in Outlook requires #body_table_for_outlook below. -->
+			<!--[if !mso]><!-- -->
+			<div id="body" class="content" style="background-color:#ffffff; border: 1px solid #ccc; font-family: sans-serif; font-size: 14px; line-height: 1.4em; text-align: left; margin: 0; padding: 0;">
+			<!--<![endif]-->
+	
+			<!--[if mso]>
+			<table id="body_table_for_outlook" class="content" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="background-color: #ffffff; border: 1px solid #ccc; font-family: sans-serif; font-size: 14px; line-height: 1.4em; text-align: left; margin: 0; padding: 0;">
+			<tr><td>
+			<![endif]-->
+			
+				<div class="inner" style="margin: 10px;">
+			
+					<p style="margin: 1em auto;">
+					{{{html}}}
+					
+					<img src="http://placehold.it/245x275&text=Callout" alt="Right aligned callout graphic" align="right" hspace="7" vspace="15" style="margin: 0 0 1em 1em; max-width: 45% !important; border: 0;">
+					
+					</p>
+
+					<p style="margin: 1em auto;">
+					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+					</p>
+
+					<p style="margin: 1em auto;">
+					Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+					</p>
+
+					<p style="margin: 1em auto;">
+					<b><a href="#">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>
+					</p>
+
+					<p style="margin: 1em auto;">
+					Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+					</p>
+
+					<p style="margin: 1em auto;">
+					Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.
+					</p>
+
+					<p style="margin: 1em auto;">
+					Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+					</p>
+
+					<p style="margin: 1em auto;">
+					<b><a href="#">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>
+					</p>
+
+					<p style="margin: 1em auto;">
+					<center>
+					<img src="http://placehold.it/598x150&text=Callout+(598px)" alt="Full width callout graphic" style="max-width: 100% !important;">
+					</center>
+					</p>
+
+					<p style="margin: 1em auto;">
+					Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+					</p>
+
+					<p style="margin: 1em auto;">
+					Sincerely,<br>
+					<img id="signature" alt="[Signed]" src="http://placehold.it/175x40&text=Signature" style="margin: 5px 0; max-width: 100% !important; max-height: auto;"><br>
+					Signer
+					</p>
+
+					<center>
+					<div id="body_buttons" style="margin: 4em auto 2em auto;">
+
+					<!-- "Bulletproof" email button without graphics based on Stig Morten Myre's technique at http://emailbtn.net/. Works with Outlook. Note the need to add the contrib link and the button language in two spots to best support Oulook. -->
+						<p style="margin: 0;">
+							<!--[if mso]>
+								<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="## ADD CONTRIB LINK HERE ##" style="height:48px;v-text-anchor:middle;width:190px;" arcsize="18%" strokecolor="#b90f10" fillcolor="#a30a0d">
+									<w:anchorlock/>
+									<center style="color:#ffffff;font-size:1.5em;font-weight:bold;font-family:sans-serif;">
+										Contribute
+									</center>
+								</v:roundrect>
+							<![endif]-->					
+							<!--[if !mso]><!---->
+								<a id="contribute_btn" href="## ADD CONTRIB LINK HERE ##" style="background-color:#a30a0d;border:1px solid #b90f10;border-radius:6px;color:#ffffff;display:inline-block;font-size:1.5em;font-weight:bold;line-height:2.25em;text-align:center;text-decoration:none;width:190px;-webkit-text-size-adjust:none;">
+									Contribute
+								</a>
+							<!--<![endif]-->
+						</p>
+
+					<!-- Image-based buttons easily supported using the code below. Just uncomment. -->
+					<!--
+						<p style="margin: 1em auto;">
+						<img src="http://placehold.it/215x55&text=Contribute" style="max-width: 100% !important; max-height: auto;">
+						</p>
+					-->
+
+					</div>
+					</center>
+		
+				</div><!-- end .inner -->
+		
+			<!--[if mso]>
+				</td></tr>
+				</table> 
+			<![endif]--> <!-- end #body_table_for_outlook -->	
+
+			<!--[if !mso]><!-- -->
+			</div>	
+			<!--<![endif]--> <!-- end #body -->
+
+		<div id="footer" style="width: 100%; font-family: sans-serif; font-size: 12px; line-height: 1.4em; margin: 0 auto; padding-top: 2em; color: #444444;">
+
+			<div class="inner" style="margin: 10px;">
+		
+				<div id="unsub" style="margin: 0 auto 2em auto;">
+					<center>		
+						<p style="margin: 1em auto;">
+							This email was sent to [[Email]].<br>
+							<a href="#">To unsubscribe from the [[Client Name]] email list, please click here.</a>
+						</p>
+					</center>
+				</div>
+
+				<p style="margin: 1em auto;">
+					<div style="border: 1px solid black; margin: 10px auto 40px; padding: 8px; text-align: center; max-width: 380px; font-size: 12px;">
+						Paid for by lorem ipsum dolor sit amet
+					</div>
+				</p>
+		
+			</div><!-- end .inner -->	
+				
+		</div><!-- end #footer -->	
+
+		</div><!-- end #container .inner -->	
+
+	</div><!-- end #container -->
+
+<br><br> <!-- Provides for bottom padding. -->
+
+<!-- Section below closes tags to set max-width of 600px for Outlook 2007 and above. Remove this section to remove max-width from email body. Also need to edit CSS above, edit DIV tag above and remove Office-specific code above. --> 
+<!--[if mso]>
+	</td></tr>
+	</table>
+<![endif]-->
+
+<!--[if mso]>
+</td></tr>
+</table> 
+<![endif]--> <!-- end #background_table_for_outlook -->
+
+</div><!-- end #background -->
+
+</center>
+
+<!-- TemplateEndEditable -->	
+
+</body>
+
+</html>

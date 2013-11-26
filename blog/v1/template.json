@@ -1,0 +1,16 @@
+{
+	"message_type":"blog",
+	"icon-class":"icon-rss",
+	"label":"Standard Blog Template",
+	"configuration":{},
+	"formats":[
+		{
+			"label":"Content",
+			"render_engine":"hogan",
+			"render_file":"index.html",
+			"configuration":{
+				"html":{"type":"markdown"}
+			}
+		}
+	]
+}
