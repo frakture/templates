@@ -1,9 +1,9 @@
 {
-	"message_type":"blog",
+	"message_type":"donation_page",
 	"icon-class":"icon-rss",
-	"label":"Standard Blog Template",
+	"label":"Donation Page v1",
 	"configuration":{},
-	"code_type":"clicks",
+	"code_type":"conversion_amounts",
 	"formats":[
 		{
 			"label":"Content",

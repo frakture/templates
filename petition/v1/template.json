@@ -1,9 +1,9 @@
 {
-	"message_type":"blog",
+	"message_type":"petition",
 	"icon-class":"icon-rss",
-	"label":"Standard Blog Template",
+	"label":"Advocacy Page v1",
 	"configuration":{},
-	"code_type":"clicks",
+	"code_type":"advocacy_actions",
 	"formats":[
 		{
 			"label":"Content",
