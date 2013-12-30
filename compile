@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ../server
+foreman run node bots/workerbots/TemplateBot.js --method=listTemplates > ../templates/templates.json

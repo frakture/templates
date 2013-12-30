@@ -1,7 +1,5 @@
 {
-	"message_type":"blog",
-	"icon-class":"icon-rss",
-	"label":"Standard Blog Template",
+	"label":"Blog Template",
 	"configuration":{},
 	"code_type":"clicks",
 	"formats":[
@@ -10,7 +8,7 @@
 			"render_engine":"hogan",
 			"render_file":"index.html",
 			"configuration":{
-				"html":{"type":"markdown"}
+				"html":{"type":"wysiwyg"}
 			}
 		}
 	]

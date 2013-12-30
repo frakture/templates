@@ -38,7 +38,7 @@ Sample Template:
 			"render_file":"index.html",
 			// Configuration options specific to this format
 			"configuration":{
-				"html":{"type":"markdown"}
+				"html":{"type":"wysiwyg"}
 			}
 		},
 		{
@@ -47,7 +47,7 @@ Sample Template:
 			"render_engine":"hogan",
 			"render_file":"index.txt",
 			"configuration":{
-				"text":{"type":"markdown"}
+				"text":{"type":"wysiwyg"}
 			}
 		}
 	]

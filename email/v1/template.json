@@ -1,7 +1,8 @@
 {
 	"message_type":"email",
-	"icon-class":"icon-at-sign",
+	"icon-class":"icon-envelope",
 	"label":"Standard Email Template",
+	"segments":true,
 	"configuration":{
 		"from_name":{"type":"string"},
 		"from_email":{"type":"string"}
@@ -12,7 +13,7 @@
 			"render_engine":"hogan",
 			"render_file":"index.html",
 			"configuration":{
-				"html":{"type":"markdown"}
+				"html":{"type":"wysiwyg"}
 			}
 		},
 		{
@@ -21,7 +22,7 @@
 			"render_engine":"hogan",
 			"render_file":"index.txt",
 			"configuration":{
-				"html":{"type":"markdown"}
+				"text":{"type":"text"}
 			}
 		}
 	]

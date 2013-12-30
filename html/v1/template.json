@@ -1,9 +1,7 @@
 {
-	"message_type":"petition",
-	"icon-class":"icon-rss",
-	"label":"Advocacy Page v1",
+	"label":"Blank Page",
 	"configuration":{},
-	"code_type":"advocacy_actions",
+	"code_type":"page",
 	"formats":[
 		{
 			"label":"Content",
