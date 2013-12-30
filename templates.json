@@ -1,0 +1,110 @@
+[
+    {
+        "label": "Blog Template",
+        "configuration": {},
+        "code_type": "clicks",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "blog/v1"
+    },
+    {
+        "label": "Donation Page v1",
+        "configuration": {},
+        "code_type": "conversion_amounts",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "donation_page/v1"
+    },
+    {
+        "label": "Blank Page",
+        "configuration": {},
+        "code_type": "page",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "html/v1"
+    },
+    {
+        "label": "Advocacy Page v1",
+        "configuration": {},
+        "code_type": "advocacy_actions",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "petition/v1"
+    },
+    {
+        "label": "Standard Email Template",
+        "segments": true,
+        "configuration": {
+            "from_name": {
+                "type": "string"
+            },
+            "from_email": {
+                "type": "string"
+            }
+        },
+        "formats": [
+            {
+                "label": "HTML",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            },
+            {
+                "label": "Text",
+                "help": "Emails are sent with both HTML and text formats, for mobile readers",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                }
+            }
+        ],
+        "path": "email/v1"
+    }
+]

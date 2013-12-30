@@ -1,6 +1,4 @@
 {
-	"message_type":"email",
-	"icon-class":"icon-envelope",
 	"label":"Standard Email Template",
 	"segments":true,
 	"configuration":{
