@@ -1,6 +1,6 @@
 {
 	"label":"Standard Email Template",
-	"segments":true,
+	"message_type":"email",
 	"configuration":{
 		"from_name":{"type":"string"},
 		"from_email":{"type":"string"}

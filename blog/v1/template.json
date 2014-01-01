@@ -2,6 +2,7 @@
 	"label":"Blog Template",
 	"configuration":{},
 	"code_type":"clicks",
+	"message_type":["web_page","blog"],
 	"formats":[
 		{
 			"label":"Content",

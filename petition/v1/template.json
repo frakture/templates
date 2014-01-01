@@ -1,6 +1,7 @@
 {
 	"label":"Advocacy Page v1",
 	"configuration":{},
+	"message_type":"advocacy_page",
 	"code_type":"advocacy_actions",
 	"formats":[
 		{
