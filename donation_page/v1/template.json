@@ -1,7 +1,6 @@
 {
 	"label":"Donation Page v1",
 	"configuration":{},
-	"code_type":"conversion_amounts",
 	"message_type":"donation_page",
 	"formats":[
 		{
