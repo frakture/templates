@@ -1,0 +1,15 @@
+{
+	"label":"Social",
+	"configuration":{},
+	"message_type":"social",
+	"formats":[
+		{
+			"label":"Content",
+			"render_engine":"hogan",
+			"render_file":"index.html",
+			"configuration":{
+				"html":{"type":"wysiwyg"}
+			}
+		}
+	]
+}
