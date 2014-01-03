@@ -1,5 +1,26 @@
 [
     {
+        "label": "Blog Template",
+        "configuration": {},
+        "message_type": [
+            "web_page",
+            "blog"
+        ],
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "blog/v1"
+    },
+    {
         "label": "Standard Email Template",
         "message_type": "email",
         "configuration": {
@@ -36,12 +57,9 @@
         "path": "email/v1"
     },
     {
-        "label": "Blog Template",
+        "label": "Donation Page v1",
         "configuration": {},
-        "message_type": [
-            "web_page",
-            "blog"
-        ],
+        "message_type": "donation_page",
         "formats": [
             {
                 "label": "Content",
@@ -54,7 +72,7 @@
                 }
             }
         ],
-        "path": "blog/v1"
+        "path": "donation_page/v1"
     },
     {
         "label": "Blank Page",
@@ -75,9 +93,9 @@
         "path": "html/v1"
     },
     {
-        "label": "Donation Page v1",
+        "label": "Social",
         "configuration": {},
-        "message_type": "donation_page",
+        "message_type": "social",
         "formats": [
             {
                 "label": "Content",
@@ -90,7 +108,7 @@
                 }
             }
         ],
-        "path": "donation_page/v1"
+        "path": "social/v1"
     },
     {
         "label": "Advocacy Page v1",
