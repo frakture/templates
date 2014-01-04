@@ -1,7 +1,10 @@
 {
-	"label":"Blank Page",
+	"label":"Web Page",
 	"configuration":{},
 	"message_type":"html",
+	"configuration":{
+		"url":{"label":"URL"}
+	},
 	"formats":[
 		{
 			"label":"Content",

@@ -2,8 +2,9 @@
 	"label":"Standard Email Template",
 	"message_type":"email",
 	"configuration":{
-		"from_name":{"type":"string"},
-		"from_email":{"type":"string"}
+		"subject":{"label":"Subject"},
+		"from_name":{"label":"From Name"},
+		"from_email":{"type":"email","label":"From Email"}
 	},
 	"formats":[
 		{

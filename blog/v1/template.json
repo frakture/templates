@@ -1,7 +1,7 @@
 {
 	"label":"Blog Template",
 	"configuration":{},
-	"message_type":["web_page","blog"],
+	"message_type":"blog",
 	"formats":[
 		{
 			"label":"Content",
