@@ -1,0 +1,30 @@
+{
+	"label":"Banners",
+	"message_type":"banner",
+	"formats":[
+		{
+			"label":"Large",
+			"render_engine":"hogan",
+			"render_file":"large.html",
+			"configuration":{
+				"large":{"type":"url"}
+			}
+		},
+		{
+			"label":"Medium",
+			"render_engine":"hogan",
+			"render_file":"medium.html",
+			"configuration":{
+				"medium":{"type":"url"}
+			}
+		},
+		{
+			"label":"Mobile",
+			"render_engine":"hogan",
+			"render_file":"mobile.html",
+			"configuration":{
+				"mobile":{"type":"url"}
+			}
+		}
+	]
+}

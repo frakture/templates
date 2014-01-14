@@ -1,0 +1,15 @@
+{
+	"label":"Text",
+	"configuration":{},
+	"message_type":"text",
+	"formats":[
+		{
+			"label":"Content",
+			"render_engine":"hogan",
+			"render_file":"index.txt",
+			"configuration":{
+				"text":{"type":"text"}
+			}
+		}
+	]
+}

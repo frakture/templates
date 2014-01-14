@@ -1,11 +1,6 @@
 {
 	"label":"Standard Email Template",
 	"message_type":"email",
-	"configuration":{
-		"subject":{"label":"Subject"},
-		"from_name":{"label":"From Name"},
-		"from_email":{"type":"email","label":"From Email"}
-	},
 	"formats":[
 		{
 			"label":"HTML",

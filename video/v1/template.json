@@ -1,0 +1,30 @@
+{
+	"label":"Video",
+	"message_type":"video",
+	"formats":[
+		{
+			"label":"Large",
+			"render_engine":"hogan",
+			"render_file":"large.html",
+			"configuration":{
+				"large":{"type":"text"}
+			}
+		},
+		{
+			"label":"Medium",
+			"render_engine":"hogan",
+			"render_file":"medium.html",
+			"configuration":{
+				"medium":{"type":"text"}
+			}
+		},
+		{
+			"label":"Mobile",
+			"render_engine":"hogan",
+			"render_file":"mobile.html",
+			"configuration":{
+				"mobile":{"type":"text"}
+			}
+		}
+	]
+}
