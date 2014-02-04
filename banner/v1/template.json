@@ -7,7 +7,7 @@
 			"render_engine":"hogan",
 			"render_file":"large.html",
 			"configuration":{
-				"large":{"type":"url"}
+				"large":{"type":"text"}
 			}
 		},
 		{
@@ -15,7 +15,7 @@
 			"render_engine":"hogan",
 			"render_file":"medium.html",
 			"configuration":{
-				"medium":{"type":"url"}
+				"medium":{"type":"text"}
 			}
 		},
 		{
@@ -23,7 +23,7 @@
 			"render_engine":"hogan",
 			"render_file":"mobile.html",
 			"configuration":{
-				"mobile":{"type":"url"}
+				"mobile":{"type":"text"}
 			}
 		}
 	]
