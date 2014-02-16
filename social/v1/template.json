@@ -6,9 +6,9 @@
 		{
 			"label":"Content",
 			"render_engine":"hogan",
-			"render_file":"index.html",
+			"render_file":"index.txt",
 			"configuration":{
-				"html":{"type":"wysiwyg"}
+				"text":{"type":"text"}
 			}
 		}
 	]

@@ -1,33 +1,5 @@
 [
     {
-        "label": "Standard Email Template",
-        "message_type": "email",
-        "formats": [
-            {
-                "label": "HTML",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                }
-            },
-            {
-                "label": "Text",
-                "help": "Emails are sent with both HTML and text formats, for mobile readers",
-                "render_engine": "hogan",
-                "render_file": "index.txt",
-                "configuration": {
-                    "text": {
-                        "type": "text"
-                    }
-                }
-            }
-        ],
-        "path": "email/v1"
-    },
-    {
         "label": "Banners",
         "message_type": "banner",
         "formats": [
@@ -65,24 +37,6 @@
         "path": "banner/v1"
     },
     {
-        "label": "Social",
-        "configuration": {},
-        "message_type": "social",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                }
-            }
-        ],
-        "path": "social/v1"
-    },
-    {
         "label": "Donation Page v1",
         "configuration": {},
         "message_type": "donation_page",
@@ -99,6 +53,57 @@
             }
         ],
         "path": "donation_page/v1"
+    },
+    {
+        "label": "Blog Template",
+        "configuration": {},
+        "message_type": "blog",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "blog/v1"
+    },
+    {
+        "label": "Testing Template",
+        "parent": "email/v1",
+        "path": "email/testing"
+    },
+    {
+        "label": "Standard Email Template",
+        "message_type": "email",
+        "formats": [
+            {
+                "label": "HTML",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            },
+            {
+                "label": "Text",
+                "help": "Emails are sent with both HTML and text formats, for mobile readers",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                }
+            }
+        ],
+        "path": "email/v1"
     },
     {
         "label": "Web Page",
@@ -141,22 +146,40 @@
         "path": "petition/v1"
     },
     {
-        "label": "Blog Template",
+        "label": "Social",
         "configuration": {},
-        "message_type": "blog",
+        "message_type": "social",
         "formats": [
             {
                 "label": "Content",
                 "render_engine": "hogan",
-                "render_file": "index.html",
+                "render_file": "index.txt",
                 "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
+                    "text": {
+                        "type": "text"
                     }
                 }
             }
         ],
-        "path": "blog/v1"
+        "path": "social/v1"
+    },
+    {
+        "label": "Text",
+        "configuration": {},
+        "message_type": "text",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                }
+            }
+        ],
+        "path": "text/v1"
     },
     {
         "label": "Video",
@@ -194,23 +217,5 @@
             }
         ],
         "path": "video/v1"
-    },
-    {
-        "label": "Text",
-        "configuration": {},
-        "message_type": "text",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.txt",
-                "configuration": {
-                    "text": {
-                        "type": "text"
-                    }
-                }
-            }
-        ],
-        "path": "text/v1"
     }
 ]
