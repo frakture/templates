@@ -1,5 +1,41 @@
 [
     {
+        "label": "Blog Template",
+        "configuration": {},
+        "message_type": "blog",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "blog/v1"
+    },
+    {
+        "label": "Donation Page v1",
+        "configuration": {},
+        "message_type": "donation_page",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "donation_page/v1"
+    },
+    {
         "label": "Banners",
         "message_type": "banner",
         "formats": [
@@ -37,9 +73,34 @@
         "path": "banner/v1"
     },
     {
-        "label": "Donation Page v1",
+        "label": "Facebook",
         "configuration": {},
-        "message_type": "donation_page",
+        "message_type": "facebook",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    },
+                    "picture": {
+                        "type": "text"
+                    }
+                }
+            }
+        ],
+        "path": "facebook/v1"
+    },
+    {
+        "label": "Web Page",
+        "configuration": {
+            "url": {
+                "label": "URL"
+            }
+        },
+        "message_type": "html",
         "formats": [
             {
                 "label": "Content",
@@ -52,30 +113,7 @@
                 }
             }
         ],
-        "path": "donation_page/v1"
-    },
-    {
-        "label": "Blog Template",
-        "configuration": {},
-        "message_type": "blog",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                }
-            }
-        ],
-        "path": "blog/v1"
-    },
-    {
-        "label": "Testing Template",
-        "parent": "email/v1",
-        "path": "email/testing"
+        "path": "html/v1"
     },
     {
         "label": "Standard Email Template",
@@ -106,62 +144,9 @@
         "path": "email/v1"
     },
     {
-        "label": "Web Page",
-        "configuration": {
-            "url": {
-                "label": "URL"
-            }
-        },
-        "message_type": "html",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                }
-            }
-        ],
-        "path": "html/v1"
-    },
-    {
-        "label": "Advocacy Page v1",
-        "configuration": {},
-        "message_type": "advocacy_page",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                }
-            }
-        ],
-        "path": "petition/v1"
-    },
-    {
-        "label": "Social",
-        "configuration": {},
-        "message_type": "social",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.txt",
-                "configuration": {
-                    "text": {
-                        "type": "text"
-                    }
-                }
-            }
-        ],
-        "path": "social/v1"
+        "label": "Testing Template",
+        "parent": "email/v1",
+        "path": "email/testing"
     },
     {
         "label": "Text",
@@ -180,6 +165,24 @@
             }
         ],
         "path": "text/v1"
+    },
+    {
+        "label": "Advocacy Page v1",
+        "configuration": {},
+        "message_type": "advocacy_page",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                }
+            }
+        ],
+        "path": "petition/v1"
     },
     {
         "label": "Video",
@@ -217,5 +220,23 @@
             }
         ],
         "path": "video/v1"
+    },
+    {
+        "label": "Social",
+        "configuration": {},
+        "message_type": "social",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                }
+            }
+        ],
+        "path": "social/v1"
     }
 ]
