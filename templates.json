@@ -1,5 +1,42 @@
 [
     {
+        "label": "Facebook",
+        "message_type": "facebook",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}\n{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}"
+            }
+        ],
+        "path": "facebook/v1"
+    },
+    {
+        "label": "Social",
+        "configuration": {},
+        "message_type": "social",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                },
+                "render_content": "{{text}}"
+            }
+        ],
+        "path": "social/v1"
+    },
+    {
         "label": "Blog Template",
         "configuration": {},
         "message_type": "blog",
@@ -12,15 +49,16 @@
                     "html": {
                         "type": "wysiwyg"
                     }
-                }
+                },
+                "render_content": "{{{html}}}"
             }
         ],
         "path": "blog/v1"
     },
     {
-        "label": "Donation Page v1",
+        "label": "Advocacy Page v1",
         "configuration": {},
-        "message_type": "donation_page",
+        "message_type": "advocacy_page",
         "formats": [
             {
                 "label": "Content",
@@ -30,52 +68,16 @@
                     "html": {
                         "type": "wysiwyg"
                     }
-                }
+                },
+                "render_content": "{{{html}}}"
             }
         ],
-        "path": "donation_page/v1"
+        "path": "petition/v1"
     },
     {
-        "label": "Banners",
-        "message_type": "banner",
-        "formats": [
-            {
-                "label": "Large",
-                "render_engine": "hogan",
-                "render_file": "large.html",
-                "configuration": {
-                    "large": {
-                        "type": "text"
-                    }
-                }
-            },
-            {
-                "label": "Medium",
-                "render_engine": "hogan",
-                "render_file": "medium.html",
-                "configuration": {
-                    "medium": {
-                        "type": "text"
-                    }
-                }
-            },
-            {
-                "label": "Mobile",
-                "render_engine": "hogan",
-                "render_file": "mobile.html",
-                "configuration": {
-                    "mobile": {
-                        "type": "text"
-                    }
-                }
-            }
-        ],
-        "path": "banner/v1"
-    },
-    {
-        "label": "Facebook",
+        "label": "Text",
         "configuration": {},
-        "message_type": "facebook",
+        "message_type": "text",
         "formats": [
             {
                 "label": "Content",
@@ -84,14 +86,12 @@
                 "configuration": {
                     "text": {
                         "type": "text"
-                    },
-                    "picture": {
-                        "type": "text"
                     }
-                }
+                },
+                "render_content": "{{text}}"
             }
         ],
-        "path": "facebook/v1"
+        "path": "text/v1"
     },
     {
         "label": "Web Page",
@@ -110,10 +110,30 @@
                     "html": {
                         "type": "wysiwyg"
                     }
-                }
+                },
+                "render_content": "{{{html}}}"
             }
         ],
         "path": "html/v1"
+    },
+    {
+        "label": "Donation Page v1",
+        "configuration": {},
+        "message_type": "donation_page",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}"
+            }
+        ],
+        "path": "donation_page/v1"
     },
     {
         "label": "Standard Email Template",
@@ -127,7 +147,8 @@
                     "html": {
                         "type": "wysiwyg"
                     }
-                }
+                },
+                "render_content": "<html>\n<head>\n\n</head>\n \n<body>\n<!-- TemplateBeginEditable name=\"content\" -->\n\n\t\t\t\t\t{{{html}}}\n\t\t\t\t\t{{#html.default}}\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\t<img src=\"http://placehold.it/245x275&text=Callout\" alt=\"Right aligned callout graphic\" align=\"right\" hspace=\"7\" vspace=\"15\" style=\"margin: 0 0 1em 1em; max-width: 45% !important; border: 0;\">\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tSociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tDonec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\t<b><a href=\"#\">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tAliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tCurabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\t<b><a href=\"#\">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>\n\t\t\t\t\t</p>\n\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tDonec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tSincerely,<br>\n\t\t\t\t\t\n\t\t\t\t\tSigner\n\t\t\t\t\t</p>\n\t\t\t\t\t{{/html.default}}\n\n<!-- TemplateEndEditable -->\t\n\n</body>\n</html>\n"
             },
             {
                 "label": "Text",
@@ -138,51 +159,51 @@
                     "text": {
                         "type": "text"
                     }
-                }
+                },
+                "render_content": "{{text}}"
             }
         ],
         "path": "email/v1"
     },
     {
-        "label": "Testing Template",
-        "parent": "email/v1",
-        "path": "email/testing"
-    },
-    {
-        "label": "Text",
-        "configuration": {},
-        "message_type": "text",
+        "label": "Banners",
+        "message_type": "banner",
         "formats": [
             {
-                "label": "Content",
+                "label": "Large",
                 "render_engine": "hogan",
-                "render_file": "index.txt",
+                "render_file": "large.html",
                 "configuration": {
-                    "text": {
+                    "large": {
                         "type": "text"
                     }
-                }
-            }
-        ],
-        "path": "text/v1"
-    },
-    {
-        "label": "Advocacy Page v1",
-        "configuration": {},
-        "message_type": "advocacy_page",
-        "formats": [
+                },
+                "render_content": "<img src=\"{{large}}\"/>"
+            },
             {
-                "label": "Content",
+                "label": "Medium",
                 "render_engine": "hogan",
-                "render_file": "index.html",
+                "render_file": "medium.html",
                 "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
+                    "medium": {
+                        "type": "text"
                     }
-                }
+                },
+                "render_content": "<img src=\"{{medium}}\"/>"
+            },
+            {
+                "label": "Mobile",
+                "render_engine": "hogan",
+                "render_file": "mobile.html",
+                "configuration": {
+                    "mobile": {
+                        "type": "text"
+                    }
+                },
+                "render_content": "<img src=\"{{mobile}}\"/>"
             }
         ],
-        "path": "petition/v1"
+        "path": "banner/v1"
     },
     {
         "label": "Video",
@@ -196,7 +217,8 @@
                     "large": {
                         "type": "text"
                     }
-                }
+                },
+                "render_content": "<img src=\"{{large}}\"/>"
             },
             {
                 "label": "Medium",
@@ -206,7 +228,8 @@
                     "medium": {
                         "type": "text"
                     }
-                }
+                },
+                "render_content": "<img src=\"{{medium}}\"/>"
             },
             {
                 "label": "Mobile",
@@ -216,27 +239,41 @@
                     "mobile": {
                         "type": "text"
                     }
-                }
+                },
+                "render_content": "<img src=\"{{mobile}}\"/>"
             }
         ],
         "path": "video/v1"
     },
     {
-        "label": "Social",
-        "configuration": {},
-        "message_type": "social",
+        "label": "Testing Template",
+        "message_type": "email",
         "formats": [
             {
-                "label": "Content",
+                "label": "HTML",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "<html>\n<head>\n\n</head>\n \n<body>\n\n<!-- TemplateBeginEditable name=\"content\" -->\n\n\t\t\t\t\t{{{html}}}\n\t\t\t\t\t{{#html.default}}\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\t<img src=\"http://placehold.it/245x275&text=Callout\" alt=\"Right aligned callout graphic\" align=\"right\" hspace=\"7\" vspace=\"15\" style=\"margin: 0 0 1em 1em; max-width: 45% !important; border: 0;\">\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tSociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tDonec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\t<b><a href=\"#\">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tAliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tCurabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tMaecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\t<b><a href=\"#\">Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</a></b>\n\t\t\t\t\t</p>\n\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tDonec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\n\t\t\t\t\t</p>\n\n\t\t\t\t\t<p style=\"margin: 1em auto;\">\n\t\t\t\t\tSincerely,<br>\n\t\t\t\t\t\n\t\t\t\t\tSigner\n\t\t\t\t\t</p>\n\t\t\t\t\t{{/html.default}}\n\n<!-- TemplateEndEditable -->\t\n\n</body>\n</html>\n"
+            },
+            {
+                "label": "Text",
+                "help": "Emails are sent with both HTML and text formats, for mobile readers",
                 "render_engine": "hogan",
                 "render_file": "index.txt",
                 "configuration": {
                     "text": {
                         "type": "text"
                     }
-                }
+                },
+                "render_content": "{{text}}"
             }
         ],
-        "path": "social/v1"
+        "parent": "email/v1",
+        "path": "email/testing"
     }
 ]
