@@ -1,0 +1,14 @@
+{
+	"label":"Facebook",
+	"message_type":"facebook",
+	"formats":[
+		{
+			"label":"Content",
+			"render_engine":"hogan",
+			"render_file":"index.html",
+			"configuration":{
+				"html":{"type":"wysiwyg"}
+			}
+		}
+	]
+}
