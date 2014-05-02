@@ -12,29 +12,10 @@
                         "type": "wysiwyg"
                     }
                 },
-                "render_content": "{{{html}}}\n{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}"
+                "render_content": "<style>.box{padding:10px; margin:10px; border:1px solid #3B5998;font-size:1.2em;}\n.box h4{background:#3B5998; margin:-10px;color:#FFF;}</style>\n\n<div class=\"box\">\n\t<h4><img src=\"https://www.facebookbrand.com/img/assets/asset.f.logo.lg.png\"/> Facebook Post</h4>\n\t{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}\n\t{{{html}}}\n</div>"
             }
         ],
         "path": "facebook/v1"
-    },
-    {
-        "label": "Social",
-        "configuration": {},
-        "message_type": "social",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.txt",
-                "configuration": {
-                    "text": {
-                        "type": "text"
-                    }
-                },
-                "render_content": "{{text}}"
-            }
-        ],
-        "path": "social/v1"
     },
     {
         "label": "Blog Template",
@@ -75,23 +56,23 @@
         "path": "petition/v1"
     },
     {
-        "label": "Text",
+        "label": "Donation Page v1",
         "configuration": {},
-        "message_type": "text",
+        "message_type": "donation_page",
         "formats": [
             {
                 "label": "Content",
                 "render_engine": "hogan",
-                "render_file": "index.txt",
+                "render_file": "index.html",
                 "configuration": {
-                    "text": {
-                        "type": "text"
+                    "html": {
+                        "type": "wysiwyg"
                     }
                 },
-                "render_content": "{{text}}"
+                "render_content": "{{{html}}}"
             }
         ],
-        "path": "text/v1"
+        "path": "donation_page/v1"
     },
     {
         "label": "Web Page",
@@ -117,9 +98,8 @@
         "path": "html/v1"
     },
     {
-        "label": "Donation Page v1",
-        "configuration": {},
-        "message_type": "donation_page",
+        "label": "Facebook",
+        "message_type": "facebook",
         "formats": [
             {
                 "label": "Content",
@@ -130,10 +110,48 @@
                         "type": "wysiwyg"
                     }
                 },
-                "render_content": "{{{html}}}"
+                "render_content": "{{{html}}}\n{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}"
             }
         ],
-        "path": "donation_page/v1"
+        "path": "mail/v1"
+    },
+    {
+        "label": "Social",
+        "configuration": {},
+        "message_type": "social",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                },
+                "render_content": "{{text}}"
+            }
+        ],
+        "path": "social/v1"
+    },
+    {
+        "label": "Text",
+        "configuration": {},
+        "message_type": "text",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.txt",
+                "configuration": {
+                    "text": {
+                        "type": "text"
+                    }
+                },
+                "render_content": "{{text}}"
+            }
+        ],
+        "path": "text/v1"
     },
     {
         "label": "Standard Email Template",
