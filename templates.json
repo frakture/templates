@@ -1,23 +1,5 @@
 [
     {
-        "label": "Facebook",
-        "message_type": "facebook",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                },
-                "render_content": "<style>.box{padding:10px; margin:10px; border:1px solid #3B5998;font-size:1.2em;}\n.box h4{background:#3B5998; margin:-10px;color:#FFF;}</style>\n\n<div class=\"box\">\n\t<h4><img src=\"https://www.facebookbrand.com/img/assets/asset.f.logo.lg.png\"/> Facebook Post</h4>\n\t{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}\n\t{{{html}}}\n</div>"
-            }
-        ],
-        "path": "facebook/v1"
-    },
-    {
         "label": "Blog Template",
         "configuration": {},
         "message_type": "blog",
@@ -35,25 +17,6 @@
             }
         ],
         "path": "blog/v1"
-    },
-    {
-        "label": "Advocacy Page v1",
-        "configuration": {},
-        "message_type": "advocacy_page",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                },
-                "render_content": "{{{html}}}"
-            }
-        ],
-        "path": "petition/v1"
     },
     {
         "label": "Donation Page v1",
@@ -116,6 +79,43 @@
         "path": "mail/v1"
     },
     {
+        "label": "Facebook",
+        "message_type": "facebook",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "<style>.box{padding:10px; margin:10px; border:1px solid #3B5998;font-size:1.2em;}\n.box h4{background:#3B5998; margin:-10px;color:#FFF;}</style>\n\n<div class=\"box\">\n\t<h4><img src=\"https://www.facebookbrand.com/img/assets/asset.f.logo.lg.png\"/> Facebook Post</h4>\n\t{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}\n\t{{{html}}}\n</div>"
+            }
+        ],
+        "path": "facebook/v1"
+    },
+    {
+        "label": "Advocacy Page v1",
+        "configuration": {},
+        "message_type": "advocacy_page",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}"
+            }
+        ],
+        "path": "petition/v1"
+    },
+    {
         "label": "Social",
         "configuration": {},
         "message_type": "social",
@@ -152,6 +152,29 @@
             }
         ],
         "path": "text/v1"
+    },
+    {
+        "label": "Web Page",
+        "configuration": {
+            "url": {
+                "label": "URL"
+            }
+        },
+        "message_type": "html",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}"
+            }
+        ],
+        "path": "unknown/v1"
     },
     {
         "label": "Standard Email Template",
