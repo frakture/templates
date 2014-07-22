@@ -1,3 +1,8 @@
 #!/bin/bash
+rm t.js
+echo "var a=" > t.js
 cd ../server
-foreman run node bots/workerbots/TemplateBot.js --method=listStandardTemplates > ../templates/templates.json
+foreman run node bots/workerbots/TemplateBot.js --method=listStandardTemplates >> ../templates/t.js
+cd ../templates
+echo "console.log(JSON.stringify(a,null,4))" >> t.js
+node t.js > templates.json
