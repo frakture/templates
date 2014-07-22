@@ -6,3 +6,4 @@ foreman run node bots/workerbots/TemplateBot.js --method=listStandardTemplates >
 cd ../templates
 echo "console.log(JSON.stringify(a,null,4))" >> t.js
 node t.js > templates.json
+rm t.js

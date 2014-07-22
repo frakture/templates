@@ -1,24 +1,5 @@
 [
     {
-        "label": "Blog Template",
-        "configuration": {},
-        "message_type": "blog",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                },
-                "render_content": "{{{html}}}"
-            }
-        ],
-        "path": "blog/v1"
-    },
-    {
         "label": "Donation Page v1",
         "configuration": {},
         "message_type": "donation_page",
@@ -36,6 +17,25 @@
             }
         ],
         "path": "donation_page/v1"
+    },
+    {
+        "label": "Blog Template",
+        "configuration": {},
+        "message_type": "blog",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}"
+            }
+        ],
+        "path": "blog/v1"
     },
     {
         "label": "Facebook",
