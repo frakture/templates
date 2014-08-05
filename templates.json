@@ -1,24 +1,5 @@
 [
     {
-        "label": "Donation Page v1",
-        "configuration": {},
-        "message_type": "donation_page",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                },
-                "render_content": "{{{html}}}"
-            }
-        ],
-        "path": "donation_page/v1"
-    },
-    {
         "label": "Blog Template",
         "configuration": {},
         "message_type": "blog",
@@ -36,6 +17,25 @@
             }
         ],
         "path": "blog/v1"
+    },
+    {
+        "label": "Donation Page v1",
+        "configuration": {},
+        "message_type": "donation_page",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}"
+            }
+        ],
+        "path": "donation_page/v1"
     },
     {
         "label": "Facebook",
@@ -79,24 +79,6 @@
         "path": "html/v1"
     },
     {
-        "label": "Facebook",
-        "message_type": "facebook",
-        "formats": [
-            {
-                "label": "Content",
-                "render_engine": "hogan",
-                "render_file": "index.html",
-                "configuration": {
-                    "html": {
-                        "type": "wysiwyg"
-                    }
-                },
-                "render_content": "{{{html}}}\n{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}"
-            }
-        ],
-        "path": "mail/v1"
-    },
-    {
         "label": "Other",
         "configuration": {
             "url": {
@@ -118,6 +100,24 @@
             }
         ],
         "path": "other/v1"
+    },
+    {
+        "label": "Facebook",
+        "message_type": "facebook",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "{{{html}}}\n{{#picture}}<br/><img src=\"{{picture}}\"/>{{/picture}}"
+            }
+        ],
+        "path": "mail/v1"
     },
     {
         "label": "Advocacy Page v1",
@@ -175,6 +175,24 @@
             }
         ],
         "path": "text/v1"
+    },
+    {
+        "label": "Twitter",
+        "message_type": "twitter",
+        "formats": [
+            {
+                "label": "Content",
+                "render_engine": "hogan",
+                "render_file": "index.html",
+                "configuration": {
+                    "html": {
+                        "type": "wysiwyg"
+                    }
+                },
+                "render_content": "<head>\n<!-- For rendering oembed preview content -->\n<link href=\"/public/css/noembed.css\" rel=\"stylesheet\">\n</head>\n<body>{{{preview}}}</body>\n"
+            }
+        ],
+        "path": "twitter/v1"
     },
     {
         "label": "Standard Email Template",
