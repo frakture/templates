@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Frakture</title>
+    <meta name="description" content="Frakture: File Summary">
+    <title>Summary:{{options.filename}}</title>
+    <meta name="author" content="Chris Lundberg">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+ </head>
+ <body>
+ <main>
+ 	<div class="row">
+	    <div class="col-md-8 col-md-offset-2">
+	    	<div class="panel panel-default">
+	    	<div class="panel-heading">
+	    		<div class="">
+			    <img class="bot-image img-rounded pull-right" src="https://app.frakture.com{{bot.metadata.thumbnail}}" width="40"/>
+			    <h2 class="panel-title">{{bot.label}} has finished '{{label}}'</h2>
+			    {{date completed_at "MMMM DD, YYYY"}}
+			    </div>
+		  </div>
+	    	<div class="panel-body">
+	    	
+		<h3>File Summary:{{options.filename}}</h3>
+		{{#output}}
+		Records:{{format records}}
+		{{#fields}}
+			<h3>Field: '{{name}}'</h3>
+			<div class="">
+				Type:{{data_type}}, Records with values: {{format count}}, Min: {{min}}, Max: {{max}}
+			</div>
+			{{#ifCond data_type "==" "date"}}
+				<img src="https://chart.googleapis.com/chart?chs=600x150&chd=t:{{#value_counts}}{{count}}{{#unless @last}},{{/unless}}{{/value_counts}}&cht=bvs&chxt=x,y&chl={{#value_counts}}{{date label "MMM 'YY"}}{{#unless @last}}|{{/unless}}{{/value_counts}}"/>
+			{{/ifCond}}
+			{{#ifCond data_type "!=" "date"}}
+				<img src="https://chart.googleapis.com/chart?chs=400x150&chd=t:{{#value_counts}}{{count}}{{#unless @last}},{{/unless}}{{/value_counts}}&cht=p3&chl={{#value_counts}}{{label}}{{#unless @last}}|{{/unless}}{{/value_counts}}"/>
+			{{/ifCond}}
+		{{/fields}}
+		{{/output}}
+			</div>
+		</div>
+	</div>
+	</div>
+</main>
+</body>
+</html>

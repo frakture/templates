@@ -1,4 +1,5 @@
+Output options:<br/>
+{{json .}}
 {{#each .}}
-	{{@key}}: {{.}}
+	<li>{{@key}}: {{.}}
 {{/each}}
-
